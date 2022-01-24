@@ -27,6 +27,7 @@ public class MemberController {
 
     @PostMapping(value = "/members/new")
     public String create(@Valid MemberForm form, BindingResult result) {
+
         if (result.hasErrors()) {
             return "members/createMemberForm";
         }
@@ -36,7 +37,6 @@ public class MemberController {
         member.setName(form.getName());
         member.setAddress(address);
         memberService.join(member);
-
         return "redirect:/";
     }
 
@@ -44,7 +44,6 @@ public class MemberController {
     public String list(Model model) {
         List<Member> members = memberService.foundMembers();
         model.addAttribute("members", members);
-
         return "members/memberList";
     }
 }
