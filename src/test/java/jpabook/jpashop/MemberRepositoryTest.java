@@ -31,12 +31,12 @@ class MemberRepositoryTest {
 
         // when
         memberRepository.save(member);
-        Member foundMember = memberRepository.findOne(member.getId());
+        Member findMember = memberRepository.findOne(member.getId());
 
         // then
-        assertThat(foundMember.getId()).isEqualTo(member.getId());
-        assertThat(foundMember.getName()).isEqualTo(member.getName());
-        assertThat(foundMember).isEqualTo(member);
-        System.out.println("foundMember == member: " + (foundMember == member));
+        assertThat(findMember.getId()).isEqualTo(member.getId());
+        assertThat(findMember.getName()).isEqualTo(member.getName());
+        assertThat(findMember).isEqualTo(member);
+        System.out.println("findMember == member: " + (findMember == member));
     }
 }
