@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header"/>
 <body>
+
 <div class="container">
     <div th:replace="fragments/bodyHeader :: bodyHeader"/>
     <form th:action="@{/items/new}" th:object="${form}" method="post">
@@ -15,7 +16,7 @@
         </div>
         <div class="form-group">
             <label th:for="stockQuantity">수량</label>
-            <input type="number" th:field="*{stockQuantity}" class="formcontrol" placeholder="수량을 입력하세요">
+            <input type="number" th:field="*{stockQuantity}" class="form-control" placeholder="수량을 입력하세요">
         </div>
         <div class="form-group">
             <label th:for="author">저자</label>
@@ -30,5 +31,6 @@
     <br/>
     <div th:replace="fragments/footer :: footer"/>
 </div> <!-- /container -->
+
 </body>
 </html>
