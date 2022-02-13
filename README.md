@@ -3,3 +3,5 @@ My own-writing source codes while watching [실전! 스프링 부트와 JPA 활�
 
 ## Error
 [H2 DB 생성 경로 오류](https://www.inflearn.com/questions/363958)
+
+[주문 취소 오류 (@Transactional 유무)](https://www.inflearn.com/questions/421952)
